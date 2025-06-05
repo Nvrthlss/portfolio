@@ -1,7 +1,7 @@
 # portfolio
 
-# this is a portfolio about myself
+this is a portfolio about myself
 
-# under construction
+under construction
 
-# estimated progress: around 0%
+estimated progress: around 0%
