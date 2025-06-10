@@ -1,0 +1,215 @@
+:root {
+    --background-dark: #0f0f0f;
+    --text-light: #e0e0e0;
+    --text-accent: #6699ff;
+    --card-bg: #1a1a1a;
+    --border-color: #333;
+    --button-primary-bg: #6699ff;
+    --button-primary-text: #0f0f0f;
+    --button-secondary-bg: transparent;
+    --button-secondary-border: #333;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        repeating-linear-gradient(0deg, var(--border-color) 0, transparent 1px, transparent 100px),
+        repeating-linear-gradient(90deg, var(--border-color) 0, transparent 1px, transparent 100px);
+    background-size: 100px 100px;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+header {
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--card-bg);
+    color: var(--text-light);
+}
+
+#hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#hero .location {
+    font-size: 0.9em;
+    color: var(--text-light);
+    opacity: 0.7;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+#hero h1 {
+    font-size: clamp(2.5em, 5vw, 4.5em);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+#hero h1 span {
+    color: var(--text-accent);
+}
+
+#hero h1 .accent-color {
+    color: var(--text-accent);
+}
+
+
+#hero .intro-text {
+    font-size: clamp(1em, 2vw, 1.3em);
+    max-width: 700px;
+    margin-bottom: 50px;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.button.primary {
+    background-color: var(--button-primary-bg);
+    color: var(--button-primary-text);
+}
+
+.button.primary:hover {
+    background-color: #5588ee;
+}
+
+.button.secondary {
+    background-color: var(--button-secondary-bg);
+    color: var(--text-light);
+    border-color: var(--button-secondary-border);
+}
+
+.button.secondary:hover {
+    background-color: var(--card-bg);
+    border-color: var(--button-secondary-border);
+}
+
+.button.secondary img {
+    margin-left: 10px;
+    height: 1em;
+    filter: invert(1);
+}
+
+/* --- Reszponzivitás (mobil nézet) --- */
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    #hero {
+        padding: 0 5%;
+        text-align: center;
+    }
+
+    #hero h1 {
+        font-size: clamp(2em, 8vw, 3.5em);
+    }
+
+    #hero .intro-text {
+        font-size: clamp(0.9em, 2.5vw, 1.1em);
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .button {
+        width: 80%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+}
