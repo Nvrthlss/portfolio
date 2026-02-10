@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gergő Munkácsi - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="logo">GM</a>
+            <div class="nav-right">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <a href="#contact" class="availability-badge" id="availabilityBadge">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Open to Work</span>
+                </a>
+                <button class="version-btn" id="versionBtn">v0.1.1</button>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-tag">Based in Hungary</p>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="accent">Gergő Munkácsi</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Software Engineering Student at Eötvös Loránd University
+                </p>
+                <p class="hero-description">
+                    Computer science student passionate about learning new technologies 
+                    and building interesting projects.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT / TECH STACK SECTION -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Technologies & Skills</h2>
+            
+            <!-- Primary Technologies -->
+            <div class="tech-category">
+                <h3 class="tech-category-title">Currently Perfecting</h3>
+                <p class="tech-category-description">
+                    Programming languages and technologies I'm actively using and improving
+                </p>
+                
+                <div class="tech-icons">
+                    <!-- Python -->
+                    <div class="tech-item" data-tooltip="Python">
+                        <img src="media/python_logo.png" alt="Python" class="tech-logo">
+                    </div>
+
+                    <!-- Java -->
+                    <div class="tech-item" data-tooltip="Java">
+                        <img src="media/java_logo.png" alt="Java" class="tech-logo">
+                    </div>
+
+                    <!-- HTML/CSS/JS -->
+                    <div class="tech-item" data-tooltip="HTML/CSS/JS">
+                        <img src="media/html_logo.png" alt="HTML/CSS/JS" class="tech-logo">
+                    </div>
+
+                    <!-- PHP -->
+                    <div class="tech-item" data-tooltip="PHP">
+                        <img src="media/php_logo.png" alt="PHP" class="tech-logo">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="tech-divider"></div>
+
+            <!-- Secondary Technologies -->
+            <div class="tech-category">
+                <h3 class="tech-category-title">Familiar With</h3>
+                <p class="tech-category-description">
+                    Other languages and technologies I've learned at a foundational level
+                </p>
+
+                <div class="tech-icons">
+                    <!-- C -->
+                    <div class="tech-item" data-tooltip="C">
+                        <img src="media/c_logo.png" alt="C" class="tech-logo">
+                    </div>
+
+                    <!-- C# -->
+                    <div class="tech-item" data-tooltip="C#">
+                        <img src="media/csharp_logo.png" alt="C#" class="tech-logo">
+                    </div>
+
+                    <!-- Haskell -->
+                    <div class="tech-item" data-tooltip="Haskell">
+                        <img src="media/haskell_logo.png" alt="Haskell" class="tech-logo">
+                    </div>
+
+                    <!-- SQL -->
+                    <div class="tech-item" data-tooltip="Sql">
+                        <img src="media/sql_logo.png" alt="Sql" class="tech-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-description">
+                A collection of university and personal projects showcasing my skills
+            </p>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-number">01</div>
+                    <h3 class="project-title">Portfolio site</h3>
+                    <p class="project-description">
+                        Just a basic portfolio website for myself, using HTML, CSS, and JavaScript (will be updated frequently)
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/Nvrthlss/portfolio" class="btn btn-secondary btn-sm" target="_blank">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-number">02</div>
+                    <h3 class="project-title">Budapest Metro Game</h3>
+                    <p class="project-description">
+                        An interactive browser game using vanilla JavaScript with complex game mechanics and scoring.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                    </div>
+                    <div class="project-actions">
+                        <button class="btn btn-primary btn-sm" id="playGameBtn">Play Game</button>
+                        <a href="https://github.com/Nvrthlss/BudapestMetro" class="btn btn-secondary btn-sm" target="_blank">View Project</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-number">03</div>
+                    <h3 class="project-title">Community Budget Voting</h3>
+                    <p class="project-description">
+                        A PHP-based web application for managing and voting on community budget proposals.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">PHP</span>
+                        <span class="tag">CSS3</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/Nvrthlss/bpcommvote" class="btn btn-secondary btn-sm" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-description">
+                Feel free to reach out for collaborations or just a friendly chat
+            </p>
+            
+            <div class="contact-content">
+                <div class="contact-links">
+                    <a href="mailto:munkacsigergo@gmail.com" class="contact-link">
+                        <img src="media/email_icon.png" alt="Email" class="contact-icon">
+                        <span>munkacsigergo@gmail.com</span>
+                    </a>
+                    <a href="https://github.com/Nvrthlss" class="contact-link" target="_blank">
+                        <img src="media/github_icon.png" alt="GitHub" class="contact-icon">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/gergő-munkácsi-035a973a9/" class="contact-link" target="_blank">
+                        <img src="media/linkedin_icon.png" alt="LinkedIn" class="contact-icon">
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VERSION HISTORY MODAL -->
+    <div class="modal-overlay" id="versionModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Version History</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Version 0.1.0 -->
+                <div class="version-item">
+                    <div class="version-header">
+                        <span class="version-number">v0.1.0</span>
+                        <span class="version-date">February 10, 2026</span>
+                    </div>
+                    <ul class="version-changes">
+                        <li>- Initial release</li>
+                        <li>- Hero section with introduction</li>
+                        <li>- Projects showcase section</li>
+                        <li>- Contact section with social links</li>
+                        <li>- Dark mode minimalist design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay game-modal-overlay" id="gameModal">
+        <div class="game-modal-content">
+            <div class="game-modal-header">
+                <h3>Budapest Metro Game</h3>
+                <button class="modal-close" id="gameModalClose">&times;</button>
+            </div>
+            <div class="game-modal-body">
+                <iframe 
+                    id="gameIframe"
+                    src="https://nvrthlss.github.io/BudapestMetro/" 
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Gergő Munkácsi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
